@@ -1,0 +1,18 @@
+# coding: utf-8
+import torch
+import numpy as np
+np_data = np.arange(6).reshape((2,3))
+torch_data = torch.from_numpy(np_data)
+tensor=torch.FloatTensor(data)
+tensor2array = torch_data.numpy()
+print('\nnumpy:',np_data,
+      '\ntorch:',torch_data,
+      '\ntensor2array:',torch_data,)
+
+data = [[1,2],[1,2]]
+tensor = torch.FloatTensor(data)
+print('\nnumpy:',np.abs(data),'\ntorch:', torch.abs(tensor))
+
+print('\nnumpy:',np.matmul(data,data),'\ntorch:', torch.mm(tensor,tensor))
+print('\nnumpy:',np.matmul(data,data),'\ntorch:', tensor.dot(tensor))
+
